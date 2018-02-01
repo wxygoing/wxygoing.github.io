@@ -1,0 +1,36 @@
+.main {
+	height: 450px;
+	width: 450px;
+	border-radius: 10px;
+	background-color: #baac9f;
+	margin: 0px auto;
+	position: relative;
+	#padding: 2px;
+}
+
+.row_col {
+	height: 100px;
+	width: 100px;
+	#border: solid 2px #baac9f;
+	#color: #746B64;
+	background-color: #ccc5b4;
+	border-radius: 5px;
+	display: inline-block;
+	#text-align: center;
+	#font-weight: bold;
+	#font-family: Arial;
+	#font-size: 45px;
+	#line-height: 100px;
+	position: absolute;
+	
+}
+
+.number_cell {
+	border-radius: 5px;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 60px;
+	line-height: 100px;
+	text-align: center;
+	position: absolute;
+}

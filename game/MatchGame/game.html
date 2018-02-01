@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="UTF-8">
+		<title>Matching Game</title>
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+    	<link rel="stylesheet" href="css/game.css">	
+    </head>
+    <body>
+    	<div id="game" class="game">
+    		<div id="head-container" class="head-container">
+				<div id="title-container" class="title-container">
+	    			Matching Game
+		    	</div>
+		    	<div id="star-container" class="star-container">
+		    		<span class = "star"><i id ="star-1" class="fa fa-star"></i></span>
+		    		<span class = "star"><i id ="star-2" class="fa fa-star"></i></span>
+		    		<span class = "star"><i id ="star-3" class="fa fa-star"></i></span>
+		    		<span>&ensp;<span id ="move"></span> moves</span>
+		    		<span><i id ="refresh" class="fa fa-refresh"></i></span>
+		    	</div>
+    		</div>
+	        <div id="body-container" class="body-container">
+	        	<div id="success-container" class="success-container">
+	    			<h3>
+	    				Cougratulations! You Won!
+	    			</h3>
+	    			<p>
+	    				With <span id="step"></span> Moves and <span id='star-num' class='star-num'></span> Stars.
+	    			</p>
+	    			<p class="p2">
+	    				Woooooo!
+	    			</p>
+	    			<button id="play-again" class="play-again" name="button">Play Again!</button>
+	    		</div>	
+	    		<div id="main-container" class="main-container"></div>	
+	        </div>
+	    	</div>
+    </body>
+    <script src ="js/game.js"></script>
+</html> 
