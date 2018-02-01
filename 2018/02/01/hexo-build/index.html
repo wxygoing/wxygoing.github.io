@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo Blogs</title>
+  <title>Hexo Blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="hexo 搭建参考文章链接：这文章写得很具体    https://www.cnblogs.com/visugar/p/6821777.html 更换主题可参考   https://www.jianshu.com/p/b7886271e21a 遇到的问题1、 hexo安装成功，并且正确运行，但是localhost:4000不能访问因为安装了福晰阅读器，端口被占用。。。 解决方案 ：设置端口 hex">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo Blogs">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/02/01/hexo-build/index.html">
 <meta property="og:site_name" content="Hexo Blogs">
+<meta property="og:description" content="hexo 搭建参考文章链接：这文章写得很具体    https://www.cnblogs.com/visugar/p/6821777.html 更换主题可参考   https://www.jianshu.com/p/b7886271e21a 遇到的问题1、 hexo安装成功，并且正确运行，但是localhost:4000不能访问因为安装了福晰阅读器，端口被占用。。。 解决方案 ：设置端口 hex">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-02-01T16:25:41.304Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo Blogs">
+<meta name="twitter:description" content="hexo 搭建参考文章链接：这文章写得很具体    https://www.cnblogs.com/visugar/p/6821777.html 更换主题可参考   https://www.jianshu.com/p/b7886271e21a 遇到的问题1、 hexo安装成功，并且正确运行，但是localhost:4000不能访问因为安装了福晰阅读器，端口被占用。。。 解决方案 ：设置端口 hex">
   
     <link rel="alternative" href="/atom.xml" title="Hexo Blogs" type="application/atom+xml">
   
@@ -154,80 +158,212 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-hexo-build" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
       
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/01/hexo-build/" class="archive-article-date">
-  	<time datetime="2018-02-01T15:29:57.083Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        <h1 id="hexo-搭建"><a href="#hexo-搭建" class="headerlink" title="hexo 搭建"></a>hexo 搭建</h1><h3 id="参考文章链接："><a href="#参考文章链接：" class="headerlink" title="参考文章链接："></a>参考文章链接：</h3><p>这文章写得很具体    <a href="https://www.cnblogs.com/visugar/p/6821777.html" target="_blank" rel="external">https://www.cnblogs.com/visugar/p/6821777.html</a></p>
+<h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><p>可参考   <a href="https://www.jianshu.com/p/b7886271e21a" target="_blank" rel="external">https://www.jianshu.com/p/b7886271e21a</a></p>
+<h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><h4 id="1、-hexo安装成功，并且正确运行，但是localhost-4000不能访问"><a href="#1、-hexo安装成功，并且正确运行，但是localhost-4000不能访问" class="headerlink" title="1、 hexo安装成功，并且正确运行，但是localhost:4000不能访问"></a>1、 hexo安装成功，并且正确运行，但是localhost:4000不能访问</h4><p>因为安装了福晰阅读器，端口被占用。。。 解决方案 ：设置端口</p>
+<pre><code>hexo s -p 5000
+</code></pre><p>参考：<a href="http://blog.csdn.net/u012246342/article/details/51543370" target="_blank" rel="external">http://blog.csdn.net/u012246342/article/details/51543370</a></p>
+<h4 id="2、ERROR-Deployer-not-found-git"><a href="#2、ERROR-Deployer-not-found-git" class="headerlink" title="2、ERROR Deployer not found: git"></a>2、ERROR Deployer not found: git</h4><p>安装</p>
+<pre><code>npm install --save hexo-deployer-git
+</code></pre><h4 id="3、make-sure-you-have-the-correct-access-rights-and-the-repository-exist"><a href="#3、make-sure-you-have-the-correct-access-rights-and-the-repository-exist" class="headerlink" title="3、make sure you have the correct access rights and the repository exist"></a>3、make sure you have the correct access rights and the repository exist</h4><p>由于GitHub没有添加SSH key<br>相关链接：<a href="http://blog.csdn.net/jingtingfengguo/article/details/51892864" target="_blank" rel="external">http://blog.csdn.net/jingtingfengguo/article/details/51892864</a></p>
+<h3 id="如何写文章"><a href="#如何写文章" class="headerlink" title="如何写文章"></a>如何写文章</h3><p>参考：<a href="http://blog.csdn.net/qq_36099238/article/details/54576089" target="_blank" rel="external">http://blog.csdn.net/qq_36099238/article/details/54576089</a></p>
+<h3 id="hexo常用命令"><a href="#hexo常用命令" class="headerlink" title="hexo常用命令"></a>hexo常用命令</h3><table>
+<thead>
+<tr>
+<th>指令</th>
+<th>简写</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hexo new “PostName”</td>
+<td>hexo n “PostName”</td>
+<td>新建文章</td>
+</tr>
+<tr>
+<td>hexo new page “PostName”</td>
+<td>hexo n page “PostName”</td>
+<td>新建页面</td>
+</tr>
+<tr>
+<td>hexo clean</td>
+<td>—</td>
+<td>清除之前public文件夹的内容</td>
+</tr>
+<tr>
+<td>hexo generate</td>
+<td>hexo g</td>
+<td>生成静态页面至public目录</td>
+</tr>
+<tr>
+<td>hexo deploy</td>
+<td>hexo d</td>
+<td>将.deploy目录部署到GitHub</td>
+</tr>
+<tr>
+<td>hexo server</td>
+<td>hexo s</td>
+<td>开启预览访问端口</td>
+</tr>
+<tr>
+<td>hexo help</td>
+<td>—</td>
+<td>查看帮助</td>
+</tr>
+<tr>
+<td>hexo version</td>
+<td>hexo v</td>
+<td>查看hexo版本号</td>
+</tr>
+</tbody>
+</table>
+<p>其他指令：<br>hexo deploy -g 或者 hexo d –g 或 hexo g –d # 生成加部署<br>hexo server -g # 生成加预览</p>
+<p>参考：<a href="https://www.cnblogs.com/airbird/p/6160209.html" target="_blank" rel="external">https://www.cnblogs.com/airbird/p/6160209.html</a></p>
 
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/7-squid.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/2-turtle.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/02/01/hexo-build/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/01/hello-world/" class="archive-article-date">
-  	<time datetime="2017-11-01T10:51:44.095Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-01</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/01/hello-world/">Hello World</a>
-    </h1>
+  
+    <a href="/2017/11/01/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -250,8 +386,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
