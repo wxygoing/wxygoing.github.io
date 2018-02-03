@@ -15,12 +15,12 @@
 <meta property="og:site_name" content="Hexo Blogs">
 <meta property="og:description" content="SVN客户端用惯了，Git忘得差不多了，[捂脸]参考：https://www.cnblogs.com/my–sunshine/p/7093412.htmlhttps://www.cnblogs.com/allanli/p/git_commands.htmlhttps://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b806">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2018/02/03/git-grammar/git-grammar_images/git-grammar.png">
-<meta property="og:updated_time" content="2018-02-03T14:37:14.723Z">
+<meta property="og:image" content="http://yoursite.com/2018/02/03/git-grammar/img/git-grammar_images/git-grammar.png">
+<meta property="og:updated_time" content="2018-02-03T14:45:21.213Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用的Git命令">
 <meta name="twitter:description" content="SVN客户端用惯了，Git忘得差不多了，[捂脸]参考：https://www.cnblogs.com/my–sunshine/p/7093412.htmlhttps://www.cnblogs.com/allanli/p/git_commands.htmlhttps://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b806">
-<meta name="twitter:image" content="http://yoursite.com/2018/02/03/git-grammar/git-grammar_images/git-grammar.png">
+<meta name="twitter:image" content="http://yoursite.com/2018/02/03/git-grammar/img/git-grammar_images/git-grammar.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo Blogs" type="application/atom+xml">
   
@@ -188,27 +188,30 @@
 <li>master   Git自动创建的第一个分支</li>
 <li>HEAD  指向master的一个指针,当前分支最末梢最新的一个提交，也就是版本库中该分支上的最新版本 </li>
 </ul>
-<p>如图:  <img src="git-grammar_images\git-grammar.png" alt="git-grammar"></p>
-<h3 id="Git基本命令"><a href="#Git基本命令" class="headerlink" title="Git基本命令"></a>Git基本命令</h3><ol>
-<li><code>git init</code>   初始化一个本地Git环境</li>
-<li><code>git add</code>  添加文件到Git仓库，实际上就是把文件修改添加到暂存区  </li>
-<li><code>git commit</code>  把暂存区的所有内容提交到当前分支  </li>
-<li><code>git status</code>  查看仓库的状态</li>
-<li><code>git diff</code>  比较的是工作目录中当前文件和暂存区之间的差异</li>
-<li><code>git diff --cached</code>  查看已经暂存起来的文件和上次提交时的快照之间的差异</li>
-<li><code>git diff HEAD</code>   比较woking directory和上次提交之间所有的改动</li>
-<li><code>git diff [version tag]</code>   查看自从某个版本之后改动  </li>
+<p>如图:  <img src="img\git-grammar_images\git-grammar.png" alt="git-grammar"></p>
+<h3 id="Git基本命令"><a href="#Git基本命令" class="headerlink" title="Git基本命令"></a>Git基本命令</h3><blockquote>
+<ol>
+<li><code>git init</code>                                   初始化一个本地Git环境</li>
+<li><code>git add</code>                                      添加文件到Git仓库，实际上就是把文件修改添加到暂存区  </li>
+<li><code>git commit</code>                               把暂存区的所有内容提交到当前分支  </li>
+<li><code>git status</code>                                 查看仓库的状态</li>
+<li><code>git diff</code>                                     比较的是工作目录中当前文件和暂存区之间的差异</li>
+<li><code>git diff --cached</code>                     查看已经暂存起来的文件和上次提交时的快照之间的差异</li>
+<li><code>git diff HEAD</code>                          比较woking directory和上次提交之间所有的改动</li>
+<li><code>git diff [version tag]</code>             查看自从某个版本之后改动  </li>
 <li><code>git reset HEAD</code></li>
-<li><code>git revert HEAD</code>  撤销最近的一个提交</li>
-<li><code>git rm file</code>  从暂存区移除文件,同时也移除出工作目录.</li>
-<li><code>git rm --cached</code>   从暂存区移除文件,但留在工作目录中.</li>
-<li><code>git log</code>  show commit history of a branch</li>
-<li><code>git clone</code>  获取一个url对应的远程Git repo, 创建一个local copy.</li>
+<li><code>git revert HEAD</code>                  撤销最近的一个提交</li>
+<li><code>git rm file</code>                            从暂存区移除文件,同时也移除出工作目录.</li>
+<li><code>git rm --cached</code>                 从暂存区移除文件,但留在工作目录中.</li>
+<li><code>git log</code>                                 show commit history of a branch</li>
+<li><code>git clone</code>                             获取一个url对应的远程Git repo, 创建一个local copy.</li>
 </ol>
-<h3 id="常用例子"><a href="#常用例子" class="headerlink" title="常用例子"></a>常用例子</h3><blockquote>
-<p>``` git init (初始化本地Git)<br>       git add .  （将本地所有文件加到暂存区）<br>       git commit -m “message” （设置提交信息）<br>       git clone <a href="https://github.com/wxygoing/wxygoing.github.io.git" target="_blank" rel="external">https://github.com/wxygoing/wxygoing.github.io.git</a> (克隆远程仓库内容)</p>
 </blockquote>
-
+<h3 id="常用例子"><a href="#常用例子" class="headerlink" title="常用例子"></a>常用例子</h3><pre><code>git init (初始化本地Git)
+git add .  （将本地所有文件加到暂存区）
+git commit -m &quot;message&quot; （设置提交信息）
+git clone https://github.com/wxygoing/wxygoing.github.io.git (克隆远程仓库内容)
+</code></pre>
       
 
       
@@ -310,6 +313,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/02/03/sublime-configuration/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          sublime text3 配置
+        
+      </div>
+    </a>
   
   
     <a href="/2018/02/02/markdown-grammar/" id="article-nav-older" class="article-nav-link-wrap">

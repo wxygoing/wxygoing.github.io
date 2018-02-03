@@ -156,6 +156,72 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-sublime-configuration" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/03/sublime-configuration/">sublime text3 配置</a>
+    </h1>
+  
+
+        
+        <a href="/2018/02/03/sublime-configuration/" class="archive-article-date">
+  	<time datetime="2018-02-03T15:58:21.768Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="插件管理-Package-Control-安装"><a href="#插件管理-Package-Control-安装" class="headerlink" title="插件管理( Package Control )安装"></a>插件管理( Package Control )安装</h4><p>亲测有效：<a href="https://jingyan.baidu.com/article/5552ef47ff11b7518ffbc92b.html" target="_blank" rel="external">https://jingyan.baidu.com/article/5552ef47ff11b7518ffbc92b.html</a>  </p>
+<h4 id="sublime-JavaScript-JSLint配置"><a href="#sublime-JavaScript-JSLint配置" class="headerlink" title="sublime JavaScript JSLint配置"></a>sublime JavaScript JSLint配置</h4><p>在安装Package Control基础上安装<br>亲测有效：<a href="https://jingyan.baidu.com/article/b907e627b790b146e7891c3c.html" target="_blank" rel="external">https://jingyan.baidu.com/article/b907e627b790b146e7891c3c.html</a></p>
+<h4 id="sublime-主题安装"><a href="#sublime-主题安装" class="headerlink" title="sublime 主题安装"></a>sublime 主题安装</h4><p>好的主题，参考：<a href="https://www.zhihu.com/question/46266742" target="_blank" rel="external">https://www.zhihu.com/question/46266742</a></p>
+<h4 id="sublime-换行设置"><a href="#sublime-换行设置" class="headerlink" title="sublime 换行设置"></a>sublime 换行设置</h4><p><a href="https://www.jianshu.com/p/c75d21d2e967" target="_blank" rel="external">https://www.jianshu.com/p/c75d21d2e967</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/02/03/sublime-configuration/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-git-grammar" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -184,27 +250,30 @@
 <li>master   Git自动创建的第一个分支</li>
 <li>HEAD  指向master的一个指针,当前分支最末梢最新的一个提交，也就是版本库中该分支上的最新版本 </li>
 </ul>
-<p>如图:  <img src="git-grammar_images\git-grammar.png" alt="git-grammar"></p>
-<h3 id="Git基本命令"><a href="#Git基本命令" class="headerlink" title="Git基本命令"></a>Git基本命令</h3><ol>
-<li><code>git init</code>   初始化一个本地Git环境</li>
-<li><code>git add</code>  添加文件到Git仓库，实际上就是把文件修改添加到暂存区  </li>
-<li><code>git commit</code>  把暂存区的所有内容提交到当前分支  </li>
-<li><code>git status</code>  查看仓库的状态</li>
-<li><code>git diff</code>  比较的是工作目录中当前文件和暂存区之间的差异</li>
-<li><code>git diff --cached</code>  查看已经暂存起来的文件和上次提交时的快照之间的差异</li>
-<li><code>git diff HEAD</code>   比较woking directory和上次提交之间所有的改动</li>
-<li><code>git diff [version tag]</code>   查看自从某个版本之后改动  </li>
+<p>如图:  <img src="img\git-grammar_images\git-grammar.png" alt="git-grammar"></p>
+<h3 id="Git基本命令"><a href="#Git基本命令" class="headerlink" title="Git基本命令"></a>Git基本命令</h3><blockquote>
+<ol>
+<li><code>git init</code>                                   初始化一个本地Git环境</li>
+<li><code>git add</code>                                      添加文件到Git仓库，实际上就是把文件修改添加到暂存区  </li>
+<li><code>git commit</code>                               把暂存区的所有内容提交到当前分支  </li>
+<li><code>git status</code>                                 查看仓库的状态</li>
+<li><code>git diff</code>                                     比较的是工作目录中当前文件和暂存区之间的差异</li>
+<li><code>git diff --cached</code>                     查看已经暂存起来的文件和上次提交时的快照之间的差异</li>
+<li><code>git diff HEAD</code>                          比较woking directory和上次提交之间所有的改动</li>
+<li><code>git diff [version tag]</code>             查看自从某个版本之后改动  </li>
 <li><code>git reset HEAD</code></li>
-<li><code>git revert HEAD</code>  撤销最近的一个提交</li>
-<li><code>git rm file</code>  从暂存区移除文件,同时也移除出工作目录.</li>
-<li><code>git rm --cached</code>   从暂存区移除文件,但留在工作目录中.</li>
-<li><code>git log</code>  show commit history of a branch</li>
-<li><code>git clone</code>  获取一个url对应的远程Git repo, 创建一个local copy.</li>
+<li><code>git revert HEAD</code>                  撤销最近的一个提交</li>
+<li><code>git rm file</code>                            从暂存区移除文件,同时也移除出工作目录.</li>
+<li><code>git rm --cached</code>                 从暂存区移除文件,但留在工作目录中.</li>
+<li><code>git log</code>                                 show commit history of a branch</li>
+<li><code>git clone</code>                             获取一个url对应的远程Git repo, 创建一个local copy.</li>
 </ol>
-<h3 id="常用例子"><a href="#常用例子" class="headerlink" title="常用例子"></a>常用例子</h3><blockquote>
-<p>``` git init (初始化本地Git)<br>       git add .  （将本地所有文件加到暂存区）<br>       git commit -m “message” （设置提交信息）<br>       git clone <a href="https://github.com/wxygoing/wxygoing.github.io.git" target="_blank" rel="external">https://github.com/wxygoing/wxygoing.github.io.git</a> (克隆远程仓库内容)</p>
 </blockquote>
-
+<h3 id="常用例子"><a href="#常用例子" class="headerlink" title="常用例子"></a>常用例子</h3><pre><code>git init (初始化本地Git)
+git add .  （将本地所有文件加到暂存区）
+git commit -m &quot;message&quot; （设置提交信息）
+git clone https://github.com/wxygoing/wxygoing.github.io.git (克隆远程仓库内容)
+</code></pre>
       
 
       
@@ -378,7 +447,7 @@
 <h4 id="2、ERROR-Deployer-not-found-git"><a href="#2、ERROR-Deployer-not-found-git" class="headerlink" title="2、ERROR Deployer not found: git"></a>2、ERROR Deployer not found: git</h4><p>安装</p>
 <pre><code>npm install --save hexo-deployer-git
 </code></pre><h4 id="3、make-sure-you-have-the-correct-access-rights-and-the-repository-exist"><a href="#3、make-sure-you-have-the-correct-access-rights-and-the-repository-exist" class="headerlink" title="3、make sure you have the correct access rights and the repository exist"></a>3、make sure you have the correct access rights and the repository exist</h4><p>由于GitHub没有添加SSH key<br>相关链接：<a href="http://blog.csdn.net/jingtingfengguo/article/details/51892864" target="_blank" rel="external">http://blog.csdn.net/jingtingfengguo/article/details/51892864</a></p>
-<h3 id="如何写文章"><a href="#如何写文章" class="headerlink" title="如何写文章"></a>如何写文章</h3><p>参考：<a href="http://blog.csdn.net/qq_36099238/article/details/54576089" target="_blank" rel="external">http://blog.csdn.net/qq_36099238/article/details/54576089</a></p>
+<h3 id="如何写文章"><a href="#如何写文章" class="headerlink" title="如何写文章"></a>如何写文章</h3><p><code>hexo d</code><br>即可发布，并不需要用到git命令(脑子抽风时老是想着用git add)<br>参考：<a href="http://blog.csdn.net/qq_36099238/article/details/54576089" target="_blank" rel="external">http://blog.csdn.net/qq_36099238/article/details/54576089</a></p>
 <h3 id="hexo文件目录"><a href="#hexo文件目录" class="headerlink" title="hexo文件目录"></a>hexo文件目录</h3><ul>
 <li>_config.yml              全局配置文件</li>
 <li>package.json            hexo框架的参数和所依赖插件</li>
