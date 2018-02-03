@@ -156,6 +156,96 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-git-grammar" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/03/git-grammar/">常用的Git命令</a>
+    </h1>
+  
+
+        
+        <a href="/2018/02/03/git-grammar/" class="archive-article-date">
+  	<time datetime="2018-02-03T13:52:49.233Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="SVN客户端用惯了，Git忘得差不多了，-捂脸"><a href="#SVN客户端用惯了，Git忘得差不多了，-捂脸" class="headerlink" title="SVN客户端用惯了，Git忘得差不多了，[捂脸]"></a>SVN客户端用惯了，Git忘得差不多了，[捂脸]</h5><p>参考：<br><a href="https://www.cnblogs.com/my--sunshine/p/7093412.html" target="_blank" rel="external">https://www.cnblogs.com/my–sunshine/p/7093412.html</a><br><a href="https://www.cnblogs.com/allanli/p/git_commands.html" target="_blank" rel="external">https://www.cnblogs.com/allanli/p/git_commands.html</a><br><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000</a></p>
+<h3 id="Git基本概念"><a href="#Git基本概念" class="headerlink" title="Git基本概念"></a>Git基本概念</h3><ul>
+<li>工作区(working directory)  电脑里能看到的目录</li>
+<li>版本库(Repository)  工作区有个隐藏目录.git，这不算工作区，是Git版本库。</li>
+<li>暂存区(stage)  版本库存着很多东西，最重要的称为暂存区</li>
+<li>master   Git自动创建的第一个分支</li>
+<li>HEAD  指向master的一个指针,当前分支最末梢最新的一个提交，也就是版本库中该分支上的最新版本 </li>
+</ul>
+<p>如图:  <img src="git-grammar_images\git-grammar.png" alt="git-grammar"></p>
+<h3 id="Git基本命令"><a href="#Git基本命令" class="headerlink" title="Git基本命令"></a>Git基本命令</h3><ol>
+<li><code>git init</code>   初始化一个本地Git环境</li>
+<li><code>git add</code>  添加文件到Git仓库，实际上就是把文件修改添加到暂存区  </li>
+<li><code>git commit</code>  把暂存区的所有内容提交到当前分支  </li>
+<li><code>git status</code>  查看仓库的状态</li>
+<li><code>git diff</code>  比较的是工作目录中当前文件和暂存区之间的差异</li>
+<li><code>git diff --cached</code>  查看已经暂存起来的文件和上次提交时的快照之间的差异</li>
+<li><code>git diff HEAD</code>   比较woking directory和上次提交之间所有的改动</li>
+<li><code>git diff [version tag]</code>   查看自从某个版本之后改动  </li>
+<li><code>git reset HEAD</code></li>
+<li><code>git revert HEAD</code>  撤销最近的一个提交</li>
+<li><code>git rm file</code>  从暂存区移除文件,同时也移除出工作目录.</li>
+<li><code>git rm --cached</code>   从暂存区移除文件,但留在工作目录中.</li>
+<li><code>git log</code>  show commit history of a branch</li>
+<li><code>git clone</code>  获取一个url对应的远程Git repo, 创建一个local copy.</li>
+</ol>
+<h3 id="常用例子"><a href="#常用例子" class="headerlink" title="常用例子"></a>常用例子</h3><blockquote>
+<p>``` git init (初始化本地Git)<br>       git add .  （将本地所有文件加到暂存区）<br>       git commit -m “message” （设置提交信息）<br>       git clone <a href="https://github.com/wxygoing/wxygoing.github.io.git" target="_blank" rel="external">https://github.com/wxygoing/wxygoing.github.io.git</a> (克隆远程仓库内容)</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/02/03/git-grammar/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-markdown-grammar" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -180,8 +270,7 @@
 <li>开头加上 1-6 个 #, 表示一到六级标题</li>
 <li>在标题底下家任意个 = 表示一级标题，- 表示二级标题</li>
 </ul>
-<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><p>一级标题<br>=<br>二级标题<br>-</p>
-<h3 id="2、列表"><a href="#2、列表" class="headerlink" title="2、列表"></a>2、列表</h3><ul>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h1 id="一级标题-1"><a href="#一级标题-1" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题-1"><a href="#二级标题-1" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="2、列表"><a href="#2、列表" class="headerlink" title="2、列表"></a>2、列表</h3><ul>
 <li>无序列表用 -、+或*标记</li>
 <li>有序列表用数字加英文句点标记</li>
 </ul>
@@ -202,18 +291,18 @@
 <blockquote>
 <p>引用<br>引用</p>
 </blockquote>
-<h3 id="4、强调"><a href="#4、强调" class="headerlink" title="4、强调"></a>4、强调</h3><p>两个<em>或-代表加粗，一个</em>或-代表斜体，两个~代表删除<br><strong>加粗</strong><br>-斜体-<br><del>删除</del></p>
-<h3 id="图片与链接"><a href="#图片与链接" class="headerlink" title="图片与链接"></a>图片与链接</h3><p>图片与链接的语法很像，区别在一个 ! 号<br>图片：<img src="" alt="">    <img src="图片地址" alt="图片替换文本"><br>链接：<a href=""></a>     <a href="链接地址">链接文本</a></p>
-<p>链接又有行内式、参考式和自动链接<br>参考文章： <a href="https://www.jianshu.com/p/82e730892d42" target="_blank" rel="external">https://www.jianshu.com/p/82e730892d42</a>   行内式<br><img src="markdown-grammar_images\markdown-grammar.png" alt="markdown-grammar"></p>
+<h3 id="4、强调"><a href="#4、强调" class="headerlink" title="4、强调"></a>4、强调</h3><p>两个<em>或_代表加粗，一个</em>或<em>代表斜体，两个~代表删除<br><strong>加粗</strong>   或者  <strong>加粗文本</strong><br><del>删除</del><br><em>斜体文本</em>  或者  </em>斜体文本_   (原因不明，这里用下划线没效)</p>
+<h3 id="图片与链接"><a href="#图片与链接" class="headerlink" title="图片与链接"></a>图片与链接</h3><p>图片与链接的语法很像，区别在一个 ! 号<br>图片：<img src="" alt="">    !  [  图片替换文本 ] ( 图片地址 )<br>链接：<a href=""></a>     [ 链接文本 ] ( 链接地址 )</p>
+<p>链接又有行内式、参考式和自动链接<br>参考文章： <a href="https://www.jianshu.com/p/82e730892d42" target="_blank" rel="external">https://www.jianshu.com/p/82e730892d42</a>   行内式<br><img src="img\markdown-grammar_images\markdown-grammar.png" alt="markdown-grammar"></p>
 <h3 id="5、代码"><a href="#5、代码" class="headerlink" title="5、代码"></a>5、代码</h3><ul>
 <li>行内代码用 两个·包住代码，可嵌入文字中  ·code·</li>
 <li>代码块用四个空格或··· 来标识</li>
 <li>代码语法高亮是在··· 后加上语言名称</li>
 </ul>
-<p><img src="markdown-grammar_images\markdown-grammar1.png" alt="markdown-grammar1"></p>
-<h3 id="6、表格"><a href="#6、表格" class="headerlink" title="6、表格"></a>6、表格</h3><p><img src="markdown-grammar_images\markdown-grammar2.png" alt="markdown-grammar2"></p>
+<p><img src="img\markdown-grammar_images\markdown-grammar1.png" alt="markdown-grammar1"></p>
+<h3 id="6、表格"><a href="#6、表格" class="headerlink" title="6、表格"></a>6、表格</h3><p><img src="img\markdown-grammar_images\markdown-grammar2.png" alt="markdown-grammar2"></p>
 <h3 id="7、分隔线"><a href="#7、分隔线" class="headerlink" title="7、分隔线"></a>7、分隔线</h3><h2 id="用三个以上-、-或-标记除了空格行内不能有其他符号"><a href="#用三个以上-、-或-标记除了空格行内不能有其他符号" class="headerlink" title="用三个以上*、-或_ 标记除了空格行内不能有其他符号"></a>用三个以上*、-或_ 标记除了空格行内不能有其他符号</h2><h3 id="8、换行"><a href="#8、换行" class="headerlink" title="8、换行"></a>8、换行</h3><p>行尾添加两个空格加回车表示换行</p>
-<h3 id="9、脚注"><a href="#9、脚注" class="headerlink" title="9、脚注"></a>9、脚注</h3><p><img src="markdown-grammar_images\markdown-grammar3.png" alt="markdown-grammar3"></p>
+<h3 id="9、脚注"><a href="#9、脚注" class="headerlink" title="9、脚注"></a>9、脚注</h3><p><img src="img\markdown-grammar_images\markdown-grammar3.png" alt="markdown-grammar3"></p>
 <h3 id="10、用Html标签弥补Markdown不足"><a href="#10、用Html标签弥补Markdown不足" class="headerlink" title="10、用Html标签弥补Markdown不足"></a>10、用Html标签弥补Markdown不足</h3><p>参考文章：  </p>
 <ul>
 <li><a href="https://www.jianshu.com/p/82e730892d42" target="_blank" rel="external">https://www.jianshu.com/p/82e730892d42</a></li>

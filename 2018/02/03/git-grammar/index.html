@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018 | Hexo Blogs</title>
+  <title>常用的Git命令 | Hexo Blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo Blogs">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+  <meta name="description" content="SVN客户端用惯了，Git忘得差不多了，[捂脸]参考：https://www.cnblogs.com/my–sunshine/p/7093412.htmlhttps://www.cnblogs.com/allanli/p/git_commands.htmlhttps://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b806">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用的Git命令">
+<meta property="og:url" content="http://yoursite.com/2018/02/03/git-grammar/index.html">
 <meta property="og:site_name" content="Hexo Blogs">
+<meta property="og:description" content="SVN客户端用惯了，Git忘得差不多了，[捂脸]参考：https://www.cnblogs.com/my–sunshine/p/7093412.htmlhttps://www.cnblogs.com/allanli/p/git_commands.htmlhttps://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b806">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2018/02/03/git-grammar/git-grammar_images/git-grammar.png">
+<meta property="og:updated_time" content="2018-02-03T14:37:14.723Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo Blogs">
+<meta name="twitter:title" content="常用的Git命令">
+<meta name="twitter:description" content="SVN客户端用惯了，Git忘得差不多了，[捂脸]参考：https://www.cnblogs.com/my–sunshine/p/7093412.htmlhttps://www.cnblogs.com/allanli/p/git_commands.htmlhttps://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b806">
+<meta name="twitter:image" content="http://yoursite.com/2018/02/03/git-grammar/git-grammar_images/git-grammar.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo Blogs" type="application/atom+xml">
   
@@ -154,103 +160,193 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-git-grammar" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      常用的Git命令
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/03/git-grammar/" class="archive-article-date">
+
+        
+        <a href="/2018/02/03/git-grammar/" class="archive-article-date">
   	<time datetime="2018-02-03T13:52:49.233Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-03</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/03/git-grammar/">常用的Git命令</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="SVN客户端用惯了，Git忘得差不多了，-捂脸"><a href="#SVN客户端用惯了，Git忘得差不多了，-捂脸" class="headerlink" title="SVN客户端用惯了，Git忘得差不多了，[捂脸]"></a>SVN客户端用惯了，Git忘得差不多了，[捂脸]</h5><p>参考：<br><a href="https://www.cnblogs.com/my--sunshine/p/7093412.html" target="_blank" rel="external">https://www.cnblogs.com/my–sunshine/p/7093412.html</a><br><a href="https://www.cnblogs.com/allanli/p/git_commands.html" target="_blank" rel="external">https://www.cnblogs.com/allanli/p/git_commands.html</a><br><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000</a></p>
+<h3 id="Git基本概念"><a href="#Git基本概念" class="headerlink" title="Git基本概念"></a>Git基本概念</h3><ul>
+<li>工作区(working directory)  电脑里能看到的目录</li>
+<li>版本库(Repository)  工作区有个隐藏目录.git，这不算工作区，是Git版本库。</li>
+<li>暂存区(stage)  版本库存着很多东西，最重要的称为暂存区</li>
+<li>master   Git自动创建的第一个分支</li>
+<li>HEAD  指向master的一个指针,当前分支最末梢最新的一个提交，也就是版本库中该分支上的最新版本 </li>
+</ul>
+<p>如图:  <img src="git-grammar_images\git-grammar.png" alt="git-grammar"></p>
+<h3 id="Git基本命令"><a href="#Git基本命令" class="headerlink" title="Git基本命令"></a>Git基本命令</h3><ol>
+<li><code>git init</code>   初始化一个本地Git环境</li>
+<li><code>git add</code>  添加文件到Git仓库，实际上就是把文件修改添加到暂存区  </li>
+<li><code>git commit</code>  把暂存区的所有内容提交到当前分支  </li>
+<li><code>git status</code>  查看仓库的状态</li>
+<li><code>git diff</code>  比较的是工作目录中当前文件和暂存区之间的差异</li>
+<li><code>git diff --cached</code>  查看已经暂存起来的文件和上次提交时的快照之间的差异</li>
+<li><code>git diff HEAD</code>   比较woking directory和上次提交之间所有的改动</li>
+<li><code>git diff [version tag]</code>   查看自从某个版本之后改动  </li>
+<li><code>git reset HEAD</code></li>
+<li><code>git revert HEAD</code>  撤销最近的一个提交</li>
+<li><code>git rm file</code>  从暂存区移除文件,同时也移除出工作目录.</li>
+<li><code>git rm --cached</code>   从暂存区移除文件,但留在工作目录中.</li>
+<li><code>git log</code>  show commit history of a branch</li>
+<li><code>git clone</code>  获取一个url对应的远程Git repo, 创建一个local copy.</li>
+</ol>
+<h3 id="常用例子"><a href="#常用例子" class="headerlink" title="常用例子"></a>常用例子</h3><blockquote>
+<p>``` git init (初始化本地Git)<br>       git add .  （将本地所有文件加到暂存区）<br>       git commit -m “message” （设置提交信息）<br>       git clone <a href="https://github.com/wxygoing/wxygoing.github.io.git" target="_blank" rel="external">https://github.com/wxygoing/wxygoing.github.io.git</a> (克隆远程仓库内容)</p>
+</blockquote>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/7-squid.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/2-turtle.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/02/03/git-grammar/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/02/markdown-grammar/" class="archive-article-date">
-  	<time datetime="2018-02-02T15:20:42.499Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-02</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/02/02/markdown-grammar/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Markdown 语法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/02/markdown-grammar/">Markdown 语法</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/01/hexo-build/" class="archive-article-date">
-  	<time datetime="2018-02-01T15:29:57.083Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/01/hexo-build/">hexo 搭建</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -273,8 +369,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
