@@ -6,16 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>object-prototype.md | Hexo Blogs</title>
+  <title>object prototype | Hexo Blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="object-prototype.md">
+  <meta name="description" content="总结 所有函数都有一个prototype属性，默认初始值为‘空’对象 可以在原型对象中添加新方法和属性，也可以用自定义对象替换原来原型对象 对象自身属性优先级高于其原型对象中的同名属性 hasOwnProperty() 方法可以用来区分对象自身属性和原型属性   12345678910111213141516171819202122232425262728293031323334353637383">
+<meta name="keywords" content="object prototype javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="object prototype">
 <meta property="og:url" content="http://yoursite.com/2018/02/08/object-prototype/index.html">
 <meta property="og:site_name" content="Hexo Blogs">
+<meta property="og:description" content="总结 所有函数都有一个prototype属性，默认初始值为‘空’对象 可以在原型对象中添加新方法和属性，也可以用自定义对象替换原来原型对象 对象自身属性优先级高于其原型对象中的同名属性 hasOwnProperty() 方法可以用来区分对象自身属性和原型属性   12345678910111213141516171819202122232425262728293031323334353637383">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-02-08T13:05:21.821Z">
+<meta property="og:image" content="http://yoursite.com/2018/02/08/object-prototype/object-prototype.png">
+<meta property="og:image" content="http://yoursite.com/2018/02/08/object-prototype/object-prototype4.png">
+<meta property="og:updated_time" content="2018-02-08T15:43:33.919Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="object-prototype.md">
+<meta name="twitter:title" content="object prototype">
+<meta name="twitter:description" content="总结 所有函数都有一个prototype属性，默认初始值为‘空’对象 可以在原型对象中添加新方法和属性，也可以用自定义对象替换原来原型对象 对象自身属性优先级高于其原型对象中的同名属性 hasOwnProperty() 方法可以用来区分对象自身属性和原型属性   12345678910111213141516171819202122232425262728293031323334353637383">
+<meta name="twitter:image" content="http://yoursite.com/2018/02/08/object-prototype/object-prototype.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo Blogs" type="application/atom+xml">
   
@@ -162,7 +169,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      object-prototype.md
+      object prototype
     </h1>
   
 
@@ -175,7 +182,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul>
+<li>所有函数都有一个<code>prototype</code>属性，默认初始值为‘空’对象</li>
+<li>可以在原型对象中添加新方法和属性，也可以用自定义对象替换原来原型对象</li>
+<li>对象自身属性优先级高于其原型对象中的同名属性</li>
+<li><code>hasOwnProperty()</code> 方法可以用来区分对象自身属性和原型属性</li>
+</ul>
+<p><img src="/2018/02/08/object-prototype/object-prototype.png" alt="object-prototype"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div></pre></td><td class="code"><pre><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">Photo</span>(<span class="params">name, color</span>) </span>&#123;</div><div class="line">		<span class="keyword">this</span>.name = name;</div><div class="line">		<span class="keyword">this</span>.color = color;</div><div class="line">		<span class="keyword">this</span>.whichPhoto = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">			<span class="keyword">return</span> <span class="string">'I am photo whose name is '</span> + <span class="keyword">this</span>.name + <span class="string">'and color is'</span> + <span class="keyword">this</span>.color;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	Photo.prototype.width = <span class="number">10</span>;  <span class="comment">// 原型属性要加给原型函数而不是对象实体</span></div><div class="line">	Photo.prototype.height = <span class="number">10</span>;</div><div class="line">	Photo.prototype.area = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="string">'It is area is'</span> + <span class="keyword">this</span>.width * <span class="keyword">this</span>.height;	</div><div class="line">		<span class="comment">//或者  return 'It is area is' + Photo.prototype.width * Photo.prototype.height;</span></div><div class="line">	&#125;;</div><div class="line">	</div><div class="line">	<span class="comment">//或者用对象</span></div><div class="line">	Photo.prototype = &#123;</div><div class="line">		width = <span class="number">10</span>，</div><div class="line">		height = <span class="number">10</span> <span class="comment">//....</span></div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="keyword">var</span> p = <span class="keyword">new</span> Photo(<span class="string">'picture'</span>, <span class="string">'red'</span>);</div><div class="line">	p.name;		<span class="comment">// 'picture'</span></div><div class="line">	p.constructor === Photo; <span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="string">``</span><span class="string">` </span></div><div class="line"><span class="string">#### `</span>hasOwnProperty()<span class="string">` 方法可以用来区分对象自身属性和原型属性 ###</span></div><div class="line"><span class="string">原型属性或属性不存在都为`</span>falseS<span class="string">`</span></div><div class="line"><span class="string">![object-prototype2](object-prototype/object-prototype2.png)</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">`</span><span class="keyword">for</span>-<span class="keyword">in</span><span class="string">` 循环中`</span>length<span class="string">` 属性和`</span><span class="keyword">constructor</span>`属性不会显示</div><div class="line">![object-prototype1](object-prototype/object-prototype1.png)</div><div class="line"></div><div class="line">&gt;</div><div class="line">* 所有原型属性都不是可枚举的，`propertyIsEnumerable()` 都返回`false`，包括那些在`for-in 循环`中可枚举的属性</div><div class="line">* 对于内建属性和方法，大多是不可枚举的</div><div class="line">* 如果`propertyIsEnumerable()`调用的是来自原型链上的某个对象，那该对象的属性是可枚举的</div><div class="line">![object-prototype3](object-prototype/object-prototype3.png) </div><div class="line"></div><div class="line">####  isPrototypeOf() //判断当前对象是否为另一个对象原型 ####</div><div class="line"></div><div class="line">``` javascript</div><div class="line"></div><div class="line">	var monkey = &#123;</div><div class="line">		feeds: <span class="string">'bananas'</span>,</div><div class="line">		breathes: <span class="string">'air'</span></div><div class="line">	&#125;;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">Human</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">		<span class="keyword">this</span>.name = name;</div><div class="line">	&#125;</div><div class="line">	Human.prototype = monkey;</div><div class="line">	<span class="keyword">var</span> developer = <span class="keyword">new</span> Human();</div><div class="line">	developer.hacks = <span class="string">'javascript'</span>;</div><div class="line">	</div><div class="line">	<span class="comment">// isPrototypeOf() //判断当前对象是否为另一个对象原型,是 返回 true</span></div><div class="line">	monkey.isPrototypeOf(developer);</div><div class="line">	</div><div class="line">	<span class="comment">// __proto__ 与 prototype不等价，__proto__ 为某个对象实例的属性，prototype为构造函数属性</span></div><div class="line">	<span class="comment">// __proto__ 在IE浏览器是不存在的</span></div><div class="line">	<span class="comment">//Object.getPrototypeOf()获取原型对象，只有在符合`ES5`标准环境下使用</span></div><div class="line">	<span class="built_in">Object</span>.getPrototypeOf(developer) === monkey;</div><div class="line">	<span class="built_in">Object</span>.getPrototypeOf(developer).feeds;</div><div class="line">	developer.__proto__ === monkey;</div></pre></td></tr></table></figure>
+<p><strong>  <strong>proto</strong> 与 prototype不等价，<strong>proto</strong> 为某个对象实例的属性，prototype为构造函数属性
+</strong>  <strong>proto</strong> 在IE浏览器是不存在的<br>**  Object.getPrototypeOf()获取原型对象，只有在符合<code>ES5</code>标准环境下使用</p>
+<p><img src="/2018/02/08/object-prototype/object-prototype4.png" alt="object-prototype4"></p>
+<h3 id="扩展内建对象"><a href="#扩展内建对象" class="headerlink" title="扩展内建对象"></a>扩展内建对象</h3><p>如果想通过原型为某内建对象添加一个新属性，最好先检查该属性是否存在</p>
+
       
 
       
@@ -183,6 +202,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">object prototype javascript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -382,6 +412,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">object prototype javascript</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
