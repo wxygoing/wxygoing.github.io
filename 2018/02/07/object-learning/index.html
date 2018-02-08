@@ -6,19 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Button 样式 | Hexo Blogs</title>
+  <title>Object 学习 | Hexo Blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="如何将按钮变透明 背景透明    button {     background: none;     border: none; }   全部透明  button {     opacity: 0; }  如何去掉Button点击后的蓝色方框button {     outline: none; }">
+  <meta name="description" content="最佳实践 尽量使用点号访问对象方法和属性，少用带引号的属性标识 构造函数首字母大写，以便区分普通函数  创建Object方法 var o = {};var o = new Object();o.constructor  返回构造函数的引用o.toString  返回对象的描述字符串0.valueOf 返回对象的单值描述信息，通常是对象本身 o.valueOf() === 0 为true   很常用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Button 样式">
-<meta property="og:url" content="http://yoursite.com/2018/02/07/button-style/index.html">
+<meta property="og:title" content="Object 学习">
+<meta property="og:url" content="http://yoursite.com/2018/02/07/object-learning/index.html">
 <meta property="og:site_name" content="Hexo Blogs">
-<meta property="og:description" content="如何将按钮变透明 背景透明    button {     background: none;     border: none; }   全部透明  button {     opacity: 0; }  如何去掉Button点击后的蓝色方框button {     outline: none; }">
+<meta property="og:description" content="最佳实践 尽量使用点号访问对象方法和属性，少用带引号的属性标识 构造函数首字母大写，以便区分普通函数  创建Object方法 var o = {};var o = new Object();o.constructor  返回构造函数的引用o.toString  返回对象的描述字符串0.valueOf 返回对象的单值描述信息，通常是对象本身 o.valueOf() === 0 为true   很常用">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-02-07T13:07:36.263Z">
+<meta property="og:image" content="http://yoursite.com/2018/02/07/object-learning/object-learning4.png">
+<meta property="og:image" content="http://yoursite.com/2018/02/07/object-learning/object-learning5.png">
+<meta property="og:image" content="http://yoursite.com/2018/02/07/object-learning/object-learning3.png">
+<meta property="og:image" content="http://yoursite.com/2018/02/07/object-learning/object-learning1.png">
+<meta property="og:image" content="http://yoursite.com/2018/02/07/object-learning/object-learning6.png">
+<meta property="og:image" content="http://yoursite.com/2018/02/07/object-learning/object-learning7.png">
+<meta property="og:image" content="http://yoursite.com/2018/02/07/object-learning/object-learning8.png">
+<meta property="og:image" content="http://yoursite.com/2018/02/07/object-learning/object-learning9.png">
+<meta property="og:updated_time" content="2018-02-08T13:13:41.297Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Button 样式">
-<meta name="twitter:description" content="如何将按钮变透明 背景透明    button {     background: none;     border: none; }   全部透明  button {     opacity: 0; }  如何去掉Button点击后的蓝色方框button {     outline: none; }">
+<meta name="twitter:title" content="Object 学习">
+<meta name="twitter:description" content="最佳实践 尽量使用点号访问对象方法和属性，少用带引号的属性标识 构造函数首字母大写，以便区分普通函数  创建Object方法 var o = {};var o = new Object();o.constructor  返回构造函数的引用o.toString  返回对象的描述字符串0.valueOf 返回对象的单值描述信息，通常是对象本身 o.valueOf() === 0 为true   很常用">
+<meta name="twitter:image" content="http://yoursite.com/2018/02/07/object-learning/object-learning4.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo Blogs" type="application/atom+xml">
   
@@ -158,45 +167,75 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-button-style" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-object-learning" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Button 样式
+      Object 学习
     </h1>
   
 
         
-        <a href="/2018/02/07/button-style/" class="archive-article-date">
-  	<time datetime="2018-02-07T12:59:33.452Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-07</time>
+        <a href="/2018/02/07/object-learning/" class="archive-article-date">
+  	<time datetime="2018-02-07T14:01:41.546Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="如何将按钮变透明"><a href="#如何将按钮变透明" class="headerlink" title="如何将按钮变透明"></a>如何将按钮变透明</h3><ul>
-<li>背景透明  </li>
+        <h4 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h4><ul>
+<li>尽量使用点号访问对象方法和属性，少用带引号的属性标识</li>
+<li>构造函数首字母大写，以便区分普通函数</li>
 </ul>
-<pre><code class="css"><span class="selector-tag">button</span> {
-    <span class="attribute">background</span>: none;
-    <span class="attribute">border</span>: none;
-}
-</code></pre>
+<h4 id="创建Object方法"><a href="#创建Object方法" class="headerlink" title="创建Object方法"></a>创建Object方法</h4><blockquote>
+<p><code>var o = {};</code><br><code>var o = new Object();</code><br><code>o.constructor</code>  返回构造函数的引用<br><code>o.toString</code>  返回对象的描述字符串<br><code>0.valueOf</code> 返回对象的单值描述信息，通常是对象本身 <code>o.valueOf() === 0</code> 为<code>true</code></p>
+</blockquote>
 <ul>
-<li>全部透明</li>
+<li>很常用的对象文本标识法<br>由内建函数<code>Object()</code>创建<br><img src="/2018/02/07/object-learning/object-learning4.png" alt="object-learning4"></li>
+<li>构造函数法<br>比对象文本标识法好处，可以在创建对象时接收一些参数</li>
 </ul>
-<pre><code class="css"><span class="selector-tag">button</span> {
-    <span class="attribute">opacity</span>: <span class="number">0</span>;
-}
-</code></pre>
-<h3 id="如何去掉Button点击后的蓝色方框"><a href="#如何去掉Button点击后的蓝色方框" class="headerlink" title="如何去掉Button点击后的蓝色方框"></a>如何去掉Button点击后的蓝色方框</h3><pre><code class="css"><span class="selector-tag">button</span> {
-    <span class="attribute">outline</span>: none;
-}
-</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> hero = &#123; &#125;;  <span class="comment">//对象文本标识法 </span></div><div class="line"><span class="comment">//------------------------</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">People</span>(<span class="params">name</span>) </span>&#123;	<span class="comment">//构造函数</span></div><div class="line">	<span class="keyword">this</span>.name = name;</div><div class="line">	<span class="keyword">this</span>.sayHello = <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="string">'Hi'</span>+ name + <span class="string">', My name is '</span> + <span class="keyword">this</span>.name</div><div class="line">	&#125;;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> p1 = <span class="keyword">new</span> People(<span class="string">'Lisa'</span>);</div><div class="line"><span class="keyword">var</span> p2 = <span class="keyword">new</span> People(<span class="string">'Lisa'</span>);</div><div class="line">p1.name;</div><div class="line">p2.sayHello(<span class="string">'Tom'</span>);</div></pre></td></tr></table></figure>
+<h5 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h5><ul>
+<li>用<code>new</code>创建对象</li>
+<li>构造器属性 <code>constructor property</code></li>
+<li>创建对象时，同时也给它个特殊属性–构造器属性<br>构造器属性是引用一个函数，可以用来创建另一个对象  </li>
+<li><code>instanceof</code> 操作符<br>判断一个对象是否由某构造函数所创建</li>
+<li>比较对象，只有引用一样才<code>==</code>为<code>true</code><br><img src="/2018/02/07/object-learning/object-learning5.png" alt="object-learning5"></li>
+</ul>
+<p><img src="/2018/02/07/object-learning/object-learning3.png" alt="object-learning3"></p>
+<h5 id="全局对象-window"><a href="#全局对象-window" class="headerlink" title="全局对象 window"></a>全局对象 <code>window</code></h5><ul>
+<li>即为<code>widow</code>对象</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> p3 = People(<span class="string">'KangKang'</span>);</div><div class="line"><span class="keyword">typeof</span> p3;</div><div class="line"><span class="comment">// will show 'undefined'</span></div></pre></td></tr></table></figure>
+<p><img src="/2018/02/07/object-learning/object-learning1.png" alt="object-learning1"></p>
+<p>由于没有用<code>new</code>操作符，这个函数调用与其他函数没区别，p1是 函数的返回值<code>undefined</code>；此时<code>this</code>调用的是全局对象</p>
+<h5 id="Array"><a href="#Array" class="headerlink" title="Array"></a><code>Array</code></h5><p>用来构建数组的内建构造器函数，数组文本标识法<code>var a = [];</code><br>拥有<code>length</code>属性  </p>
+<p><img src="/2018/02/07/object-learning/object-learning6.png" alt="object-learning6"></p>
+<h5 id="Function"><a href="#Function" class="headerlink" title="Function"></a><code>Function</code></h5><ul>
+<li><p>尽量避免用这个构造函数</p>
+<blockquote>
+<p><code>prototype</code>属性</p>
+<ul>
+<li>每个函数<code>prototype</code>属性都指向一个对象</li>
+<li>只有在构造器函数才返回作用</li>
+<li>构造函数创建的对象都有这样的属性的引用， 可以把它当自己属性使用</li>
+</ul>
+</blockquote>
+</li>
+<li><p><code>toString()</code> 可以用来区分本地方法和自定义方法</p>
+</li>
+</ul>
+<p><img src="/2018/02/07/object-learning/object-learning7.png" alt="object-learning7"></p>
+<p>####<code>call() 与 apply()</code> ####<br>每个函数都有这两个方法<br>–可以用它触发函数<br>–让一个对象借用另一对象的方法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//my_obj 借用 some_obj的方法，后面的参数</span></div><div class="line">some_obj.someMethod.apply(my_obj, [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>]);</div><div class="line">some_obj.someMethod.call(my_obj, <span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>);</div></pre></td></tr></table></figure>
+<h5 id="arguments对象"><a href="#arguments对象" class="headerlink" title="arguments对象"></a><code>arguments</code>对象</h5><p>类似数组的对象，也有索引元素和<code>length</code>属性，但无数组的一些方法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="comment">// 或者 var a = Array.prototype.slice.call(arguments); </span></div><div class="line">	<span class="keyword">var</span> a = [].slice.call(<span class="built_in">arguments</span>); </div><div class="line">	<span class="keyword">return</span> a.reverse()</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p><img src="/2018/02/07/object-learning/object-learning8.png" alt="object-learning8"></p>
+<h5 id="区分arguments对象，数组，-对象，-DOM对象"><a href="#区分arguments对象，数组，-对象，-DOM对象" class="headerlink" title="区分arguments对象，数组， 对象， DOM对象"></a>区分<code>arguments</code>对象，数组， 对象， <code>DOM</code>对象</h5><p>借用<code>Object</code> 的<code>toString</code>,由于数组的被重写了<br><img src="/2018/02/07/object-learning/object-learning9.png" alt="object-learning9"></p>
 
       
 
@@ -255,7 +294,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/02/07/button-style/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/02/07/object-learning/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -269,18 +308,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/02/07/object-learning/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/02/08/object-text-1/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Object 学习
+          Object 练习
         
       </div>
     </a>
   
   
-    <a href="/2018/02/03/sublime-configuration/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">sublime text3 配置</div>
+    <a href="/2018/02/07/button-style/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Button 样式</div>
       <i class="icon-circle-right"></i>
     </a>
   
