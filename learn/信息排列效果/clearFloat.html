@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>清除浮动</title>
+	<style type="text/css">
+		.box1 {
+		        width: 200px;
+		        height: 100px;
+		        background-color: #e04993;
+		        float: left;
+	    }
+
+	    .box2 {
+	        width: 400px;
+	        height: 100px;
+	        background-color: blue;
+	        float: left;
+	    }
+
+	    .box3 {
+	        width: 600px;
+	        height: 100px;
+	        background-color: blueviolet;
+	    }
+
+		.box:after {
+		    content: "";
+		    height: 0;
+		    display: block;
+		    visibility: hidden;
+		    clear: both;
+		}
+
+		.box {
+		    zoom: 1;  //after伪类，触发IE下haslayout,使元素根据自身内容计算宽高，它的效果和height:1%一样。
+		}
+
+		.bottom {
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			background-color: #ccc;
+			#margin-top: 100px;
+			#clear: both;
+			#float: left;   /*父元素float,子元素text-align: center;无效,解决将子元素设为浮动或者清除浮动*/
+			#width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="box1">浮动a</div>
+		<div class="box2">浮动b
+			<div class="bottom">11111111111111111111111</div>
+		</div>
+		<div>wwwwwwww</div>
+		<div>wwwwwwww</div>
+		<div>wwwwwwww</div>
+		<div>wwwwwwww</div>
+		<div class="bottom">字体的居中按照不重叠部分距离来计算，用clear: both;清除</div>
+	</div>
+	<div class="box3">不浮动c</div>
+	<div class="bottom">33333333333333</div>
+</body>
+</html>
