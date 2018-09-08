@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>展开和收起效果</title>
+</head>
+<style type="text/css">
+	body {
+		margin: 0 auto;
+		padding: 0px;
+	}
+	#pn {
+		background: #e8e8e8;
+		width: 600px;
+		height: auto;
+		margin: 0 auto;
+		padding: 5px;
+		font-size: 9pt;
+	}
+	.slide {
+		margin: 0;
+		padding: 0;
+		width: 600px;
+		border-top: solid 4px gray;
+		margin: 0 auto;
+	}
+	.btn-slide {
+		background: gray;
+		text-decoration: none;
+		text-align: center;
+		width: 120px;
+		height: 30px;
+		padding: 10px 0 0 0;
+		display: block;
+		color: #fff;
+		margin: 0 auto;
+	}
+
+</style>
+<script type="text/javascript">
+	function showDiv() { //展开函数
+		document.getElementById('hpn').style.display = 'block';
+		document.getElementById('strHref').innerHTML = '收起-';
+		document.getElementById('strHref').href = 'javascript:hideDiv();';
+	}
+	function hideDiv() {
+		document.getElementById('hpn').style.display = 'none';
+		document.getElementById('strHref').innerHTML = '更多选项+';
+		document.getElementById('strHref').href = 'javascript:showDiv();';
+	}
+</script>
+<body>
+	<div id="pn">
+		<p>
+			手机 - 商品筛选
+		</p>
+		<p>
+			网络: 移动4G 联通3G 电信3G
+		</p>
+
+		<div id="hpn" style="display: none;">
+			<p>
+				价格：5000元以上 4000-4999 3000元以下
+			</p>
+			<p>
+				特点：0元购机 防水 长待机
+			</p>
+		</div>
+	</div>
+	<p class="slide">
+		<a href="javascript:showDiv();" id="strHref" class="btn-slide">更多选项+</a>
+	</p>
+</body>
+</html>

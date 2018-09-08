@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>展开和收起效果-自动收起展开</title>
+</head>
+<style type="text/css">
+	body{
+		margin: 0 auto;
+		padding: 0;
+	}
+	#pn {
+		background: #e8e8e8;
+		width: 950px;
+		display: block;
+		margin: 0 auto;
+		padding: 5px;
+		height: auto;
+		text-align: center;
+	}
+	.content {
+		margin: 0 auto;
+		padding: 10px;
+		width: 950px;
+		background: gray;
+		text-align: center;
+		height: 40px;
+		color: #fff;
+	}
+</style>
+<script type="text/javascript">
+	var height = 0;
+	function addHeight() {
+		if (height < 300) {
+			height += 5;
+			document.getElementById('pn').style.height = height + 'px';
+		} else {
+			return;
+		}
+		setTimeout('addHeight()', 30);
+	}
+	window.onload = function showAds() {
+		addHeight();
+		setTimeout('subHeight()', 5000);
+	}
+	function subHeight() {
+		if (height > 0) {
+			height -=5;
+			document.getElementById('pn').style.height = height + 'px';
+		} else {
+			document.getElementById('pn').style.display = 'none';
+			return;
+		}
+		setTimeout('subHeight()', 30);
+	}
+</script>
+<body>
+	<div id="pn">
+		<h1>欢迎来到慕课网</h1>
+		<h2>大幅广告</h2>
+	</div>
+	<div class="content">
+		慕课网欢迎你
+		<br/>
+		正文
+	</div>
+</body>
+</html>

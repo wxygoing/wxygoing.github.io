@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>展开和收起效果</title>
+</head>
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<style type="text/css">
+	body {
+		margin: 0 auto;
+		padding: 0px;
+	}
+	#pn {
+		background: #e8e8e8;
+		width: 600px;
+		height: auto;
+		margin: 0 auto;
+		padding: 5px;
+		font-size: 9pt;
+	}
+	.slide {
+		margin: 0;
+		padding: 0;
+		width: 600px;
+		border-top: solid 4px gray;
+		margin: 0 auto;
+	}
+	.btn-slide {
+		background: gray;
+		text-decoration: none;
+		text-align: center;
+		width: 120px;
+		height: 30px;
+		padding: 10px 0 0 0;
+		display: block;
+		color: #fff;
+		margin: 0 auto;
+	}
+
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#strHref').click(function() {
+			if($("#hpn").css("display") ==="none"){
+                $(this).text('收起-');
+				$('#hpn').show(1000);
+            }else {
+				$(this).text('更多选项+');
+				$('#hpn').hide(1000);
+            }
+		});
+
+		/*$('#strHref').toggle(function() {
+		toggle() 方法在 jQuery 版本 1.8 中被废弃，在版本 1.9 中被移除，之后的版本这个函数被淘汰了
+			$(this).text('收起-');
+			$('#hpn').show(1000);
+		}, function() {
+			$(this).text('更多选项+');
+			$('#hpn').hide(1000);
+		});*/
+	});
+</script>
+<body>
+	<div id="pn">
+		 <p>
+            手机 - 商品筛选</p>
+        <p>
+            网络： 移动4G（TD-LTE ） 联通4G（TD-LTE） 联通3G（WCDMA）
+        </p>
+        <div id="hpn" style="display: none">
+            <p>
+                价格： 5000以上 4000-4999 3000-3999 2000-2999
+            </p>
+            <p>
+                特点： JDPhone计划 "0"元购机 防水 长待机 1080P全高清屏
+            </p>
+            <p>
+                价格： 5000以上 4000-4999 3000-3999 2000-2999
+            </p>
+            <p>
+                价格： 5000以上 4000-4999 3000-3999 2000-2999
+            </p>
+        </div>
+	</div>
+	<p class="slide">
+		<a href="#" id="strHref" class="btn-slide">更多选项+</a>
+	</p>
+</body>
+</html>
