@@ -1,0 +1,19 @@
+#btn {
+    width:40px;
+    height:40px;
+  /*  //固定定位设置 */
+    position: fixed;
+    left:50%;
+    margin-left:610px;
+    bottom:30px;
+    display: none;
+    background:url(../imgs/back.jpg) no-repeat left top;
+    }
+#btn:hover {
+    background:url(../imgs/back.jpg) no-repeat 0 -39px;
+    }
+.box {
+    width:1190px;
+     /* //实现大图居中 */
+     margin: 0 auto;
+    }
