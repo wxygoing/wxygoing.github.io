@@ -2,18 +2,13 @@ window.onload = function() {
 	var obtn = document.getElementById('btn');
 	//获取页面可视区的高度
 	var clientHeight = document.documentElement.clientHeight;
+	displayBtn(obtn, clientHeight)
 
 	var timer = null;
 	var isTop = true;
 	//滚动条滚动时触发
 	window.onscroll = function() {
-		//获取滚动条距离顶部的高度
-		var osTop = document.documentElement.scrollTop || document.body.scrollTop; //兼容IE和chrome
-		if (osTop >= clientHeight) {
-			obtn.style.display = 'block';
-		} else {
-			obtn.style.display = 'none';
-		}
+		displayBtn(obtn, clientHeight)
 
 		//滚动时，将定时器停止
 		if (!isTop) {
@@ -23,6 +18,9 @@ window.onload = function() {
 	}
 
 	obtn.onclick = function() {
+		if (timer) {
+			clearInterval(timer);
+		}
 		//设置定时器
 		timer = setInterval(function() {
 			//获取滚动条距离顶部的高度
@@ -39,5 +37,15 @@ window.onload = function() {
 				clearInterval(timer);
 			}
 		}, 30);
+	}
+
+	function displayBtn(obtn, clientHeight) {
+		//获取滚动条距离顶部的高度
+		var osTop = document.documentElement.scrollTop || document.body.scrollTop; //兼容IE和chrome
+		if (osTop >= clientHeight) {
+			obtn.style.display = 'block';
+		} else {
+			obtn.style.display = 'none';
+		}
 	}
 }

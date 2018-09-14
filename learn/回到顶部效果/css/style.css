@@ -7,10 +7,10 @@
     margin-left:610px;
     bottom:30px;
     display: none;
-    background:url(../imgs/back.jpg) no-repeat left top;
+    background:url(../imgs/back.png) no-repeat left 0 top 0;
     }
 #btn:hover {
-    background:url(../imgs/back.jpg) no-repeat 0 -39px;
+    background:url(../imgs/back.png) no-repeat 0 -39px;
     }
 .box {
     width:1190px;
